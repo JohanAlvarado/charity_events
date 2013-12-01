@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
   def create
     if event.save
-      flash[:notice] = "There was an error when try us save the event"
+      flash[:notice] = "Succesfully saved"
     else
       flash[:alert] = "There was an error when try us save the event"
       render :new
