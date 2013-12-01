@@ -1,15 +1,17 @@
 class EventsController < ApplicationController
   expose(:event,
          attributes: :event_params)
+  expose(:events)
 
   def index
   end
 
   def create
     if event.save
-      binding.pry
+      flash[:notice] = "There was an error when try us save the event"
     else
-      binding.pry
+      flash[:alert] = "There was an error when try us save the event"
+      render :new
     end
   end
 
