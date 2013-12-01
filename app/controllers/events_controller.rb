@@ -1,12 +1,15 @@
 class EventsController < ApplicationController
   expose(:event,
          attributes: :event_params)
+  expose(:search,
+         attributes: :search)
   expose(:events)
 
   def index
   end
 
   def create
+    event.admin = current_admin
     if event.save
       flash[:notice] = "Succesfully saved"
     else
@@ -16,6 +19,11 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def search
+    events.search(params[:page])
+  end
+
 
   def event_params
     params.require(:event).permit(:title,
