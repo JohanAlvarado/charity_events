@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   expose(:event,
          attributes: :event_params)
+  expose(:search,
+         attributes: :search)
   expose(:events)
 
   def index
@@ -16,6 +18,11 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def search
+    events.search(params[:page])
+  end
+
 
   def event_params
     params.require(:event).permit(:title,
