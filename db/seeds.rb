@@ -6,6 +6,6 @@
   event.date = "2015-10-01"
   event.hour = 21
   event.photo = "1459162_624520834278366_1375392439_n.jpg"
-  event.admin_id = 1
+  event.admin = 1
   event.save
 end

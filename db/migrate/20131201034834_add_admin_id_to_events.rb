@@ -1,6 +1,6 @@
 class AddAdminIdToEvents < ActiveRecord::Migration
   def change
-    add_column :events, :admin_id, :string
-    add_index :events, :admin_id
+    add_column :events, :admin, :string
+    add_index :events, :admin
   end
 end
