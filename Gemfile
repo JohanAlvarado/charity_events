@@ -7,6 +7,12 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'decent_exposure'
+
+gem 'carrierwave'
+
+gem 'simple_form'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

@@ -1,0 +1,24 @@
+%h1 Create your Event
+= simple_form_for event do |f|
+  = f.label :title
+  = f.input_field :title
+
+  = f.label :description
+  = f.text_area :description
+  %br
+
+  = f.label :place
+  = f.input_field :place
+
+  = f.label :date
+  = f.input_field :date
+  %br
+
+  = f.label :hour
+  = f.input_field :hour
+  %br
+
+  = f.label 'Upload a photo that we should recognize your event'
+  = f.input :photo, as: :file
+  = f.submit
+
