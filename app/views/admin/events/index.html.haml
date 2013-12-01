@@ -1,0 +1,10 @@
+%h1 My Events
+= render "layouts/admin"
+%br
+= paginate search
+- search.each do |f|
+  = f.title
+  %br
+  title
+
+
