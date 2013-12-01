@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    event.admin = current_admin
     if event.save
       flash[:notice] = "Succesfully saved"
     else
