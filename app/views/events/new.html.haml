@@ -2,22 +2,19 @@
 = simple_form_for event do |f|
   = f.label :title
   = f.input_field :title
-
   = f.label :description
   = f.text_area :description
   %br
-
   = f.label :place
   = f.input_field :place
-
   = f.label :date
   = f.input_field :date
   %br
-
   = f.label :hour
   = f.input_field :hour
   %br
-
+  = f.label :category
+  = f.input :category, collection: Event::CATEGORIES
   = f.label 'Upload a photo that we should recognize your event'
   = f.input :photo, as: :file
   = f.submit

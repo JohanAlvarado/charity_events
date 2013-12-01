@@ -31,7 +31,8 @@ class EventsController < ApplicationController
                                   :place,
                                   :date,
                                   :hour,
-                                  :photo)
+                                  :photo,
+                                  :category)
   end
 
 
